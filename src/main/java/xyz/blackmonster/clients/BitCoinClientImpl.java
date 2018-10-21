@@ -3,11 +3,11 @@ package xyz.blackmonster.clients;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.logging.log4j.core.util.IOUtils;
-import org.apache.storm.shade.org.apache.http.HttpResponse;
-import org.apache.storm.shade.org.apache.http.client.HttpClient;
-import org.apache.storm.shade.org.apache.http.client.methods.HttpGet;
-import org.apache.storm.shade.org.apache.http.impl.client.HttpClientBuilder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import xyz.blackmonster.models.BitCoinMarketValue;

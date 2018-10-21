@@ -15,5 +15,6 @@ repositories {
 
 dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
     compileOnly group: 'org.apache.storm', name: 'storm-core', version: '1.2.2'
 }
