@@ -16,11 +16,11 @@ import xyz.blackmonster.spouts.PriceEmitter;
 public class CriticalTopValue extends BaseRichBolt {
 
 	public static String TOP_LIMIT_CONF = "top";
-	private float criticalTopLimit;
+	private double criticalTopLimit;
 
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
-		this.criticalTopLimit = (Float) stormConf.get(TOP_LIMIT_CONF);
+		this.criticalTopLimit = (Double) stormConf.get(TOP_LIMIT_CONF);
 	}
 
 	@Override

@@ -27,10 +27,10 @@ public class BitCoinMonitor {
 
 		// Configuration
 		Config config = new Config();
-		config.put(PriceEmitter.INTERVAL_LENGTH_CONF, new Integer(60000));
+		config.put(PriceEmitter.INTERVAL_LENGTH_CONF, new Long(60000));
 		config.put(PriceEmitter.URL_CONF, "https://api.coindesk.com/v1/bpi/currentprice.json");
-		config.put(CriticalLowValue.BOTTOM_LIMIT_CONF, new Float(6000));
-		config.put(CriticalTopValue.TOP_LIMIT_CONF, new Float(6200));
+		config.put(CriticalLowValue.BOTTOM_LIMIT_CONF, new Double(6000));
+		config.put(CriticalTopValue.TOP_LIMIT_CONF, new Double(6200));
 		config.setDebug(false);
 
 		// Run topology

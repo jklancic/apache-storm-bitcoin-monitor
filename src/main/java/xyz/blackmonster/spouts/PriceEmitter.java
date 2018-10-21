@@ -22,19 +22,19 @@ public class PriceEmitter extends BaseRichSpout {
 	public static String URL_CONF = "url";
 
 	private SpoutOutputCollector collector;
-	private int intervalLength;
+	private long intervalLength;
 	private BitCoinClient bitCoinClient;
 
 	@Override
 	public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
 		this.collector = collector;
-		this.intervalLength = (Integer) conf.get(INTERVAL_LENGTH_CONF);
+		this.intervalLength = (Long) conf.get(INTERVAL_LENGTH_CONF);
 		this.bitCoinClient = new BitCoinClientImpl((String) conf.get(URL_CONF));
 	}
 
 	@Override
 	public void nextTuple() {
-		float value = bitCoinClient.readPriceEUR();
+		double value = bitCoinClient.readPriceEUR();
 		if (value != -1) {
 			System.out.println("Emitting value: " + value);
 			collector.emit(new Values(value));

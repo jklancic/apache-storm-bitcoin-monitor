@@ -38,12 +38,12 @@ public class BitCoinClientImpl implements BitCoinClient {
 		}
 	}
 
-	public float readPriceEUR() {
+	public double readPriceEUR() {
 		BitCoinMarketValue value = retrieveValue();
 		if(value == null) {
 			return -1;
 		}
 
-		return Float.parseFloat(value.getBitCoinPriceIndex().getEur().getRateFloat());
+		return Double.parseDouble(value.getBitCoinPriceIndex().getEur().getRateFloat());
 	}
 }
