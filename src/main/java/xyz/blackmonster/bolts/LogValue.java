@@ -16,7 +16,7 @@ public class LogValue extends BaseBasicBolt {
 
 	@Override
 	public void execute(Tuple input, BasicOutputCollector collector) {
-		double value = input.getFloatByField(PriceEmitter.PRICE);
+		double value = input.getDoubleByField(PriceEmitter.PRICE);
 		System.out.println("Current value is: " + value);
 		collector.emit(new Values(value));
 	}

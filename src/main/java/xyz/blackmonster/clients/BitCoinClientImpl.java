@@ -44,6 +44,6 @@ public class BitCoinClientImpl implements BitCoinClient {
 			return -1;
 		}
 
-		return Double.parseDouble(value.getBitCoinPriceIndex().getEur().getRateFloat());
+		return Double.parseDouble(value.getBpi().getEur().getRateFloat());
 	}
 }

@@ -10,7 +10,7 @@ public class BitCoinMarketValue {
 
 	private CurrentTime currentTime;
 	private String chartName;
-	private BitCoinPriceIndex bitCoinPriceIndex;
+	private BitCoinPriceIndex bpi;
 
 	public CurrentTime getCurrentTime() {
 		return currentTime;
@@ -28,11 +28,11 @@ public class BitCoinMarketValue {
 		this.chartName = chartName;
 	}
 
-	public BitCoinPriceIndex getBitCoinPriceIndex() {
-		return bitCoinPriceIndex;
+	public BitCoinPriceIndex getBpi() {
+		return bpi;
 	}
 
-	public void setBitCoinPriceIndex(BitCoinPriceIndex bitCoinPriceIndex) {
-		this.bitCoinPriceIndex = bitCoinPriceIndex;
+	public void setBpi(BitCoinPriceIndex bpi) {
+		this.bpi = bpi;
 	}
 }

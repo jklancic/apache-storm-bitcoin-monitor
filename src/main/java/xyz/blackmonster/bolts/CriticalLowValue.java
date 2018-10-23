@@ -25,7 +25,7 @@ public class CriticalLowValue extends BaseRichBolt {
 
 	@Override
 	public void execute(Tuple input) {
-		float value = input.getFloatByField(PriceEmitter.PRICE);
+		double value = input.getDoubleByField(PriceEmitter.PRICE);
 		if (criticalBottomLimit > value) {
 			System.out.println("The value dropped under the critical limit. Stop mining!");
 		}
